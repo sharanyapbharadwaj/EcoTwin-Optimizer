@@ -1,6 +1,6 @@
-# [Project name]
+# EcoTwin
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+EcoTwin is a local, simulated energy-monitoring and optimization platform for four independent digital-twin demonstrations.
 
 ## Run & Operate
 
@@ -22,19 +22,27 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/ecotwin/src/lib/engine.ts` — deterministic simulation and metric calculations
+- `artifacts/ecotwin/src/lib/sampleData.ts` and `types.ts` — demo inputs and shared data types
+- `artifacts/ecotwin/src/pages/` — overview, four module routes, and methodology page
+- `artifacts/ecotwin/src/components/` — shared app shell, module controls, charts, and UI
+- `artifacts/ecotwin/src/index.css` — EcoTwin theme and responsive styling
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- The current MVP uses browser-local simulated inputs and saved scenarios; it does not call the API server or database.
+- Keep module calculations deterministic and separate from presentation components.
+- The four twins are independent models. Dashboard totals are illustrative and must not treat renewable generation or battery discharge as new consumption/generation.
+- Recommendations are local rule-based estimates, not live diagnoses or machine-learning output.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+The overview aggregates the cold-chain warehouse, solar optimizer, data-center scheduler, and home energy reuse hub. Each module supports editable inputs, baseline/optimized estimates, charts, reset, and an explainable simulated recommendation. The methodology page documents model assumptions and limits.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Keep this version usable without accounts, paid APIs, a database, or connected hardware; label all values as simulated.
+- Preserve a deep navy energy-tech interface with emerald and cyan accents.
 
 ## Gotchas
 

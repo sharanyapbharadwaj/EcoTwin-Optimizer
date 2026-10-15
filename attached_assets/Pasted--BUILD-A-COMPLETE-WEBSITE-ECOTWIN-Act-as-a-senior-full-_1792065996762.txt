@@ -1,0 +1,306 @@
+# BUILD A COMPLETE WEBSITE: ECOTWIN
+
+Act as a senior full-stack developer, UI/UX designer, and energy optimization engineer. Build a complete, functional, responsive web application called **EcoTwin — Sustainable Energy Monitoring and Optimization Platform**.
+
+**CRITICAL INSTRUCTIONS**
+- Generate the entire website in one implementation.
+- Do not ask questions or generate multiple design alternatives.
+- Prioritize functional features over decorative animations.
+- Do not create four separate applications; create one unified platform with four interconnected modules.
+- Do not use paid APIs or require API keys.
+- Use local simulated data and real deterministic calculations.
+- Do not leave pages as placeholders or create buttons that do nothing.
+- Keep the code compact, reusable, maintainable, and easy to extend.
+- Preserve all existing functionality while fixing errors.
+
+## 1. TECHNOLOGY STACK
+
+Use:
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Recharts
+- Lucide React icons
+- Local mock data and browser state
+
+Build a working frontend MVP that can run locally with npm. Keep the calculation engine separate from UI components so a Python backend and database can be connected later.
+
+## 2. WEBSITE DESIGN
+
+Create a premium, modern sustainability analytics platform.
+
+Design language:
+- Deep navy background with emerald-green and cyan accents.
+- Clear typography, elegant cards, subtle borders, rounded corners.
+- Responsive sidebar navigation.
+- Interactive graphs, progress indicators, status badges, and data tables.
+- Professional energy-tech aesthetic suitable for a college project demonstration.
+
+Website name: EcoTwin.
+
+Sidebar navigation:
+1. Overview Dashboard
+2. Cold-Chain Warehouse Twin
+3. Smart Solar Optimizer
+4. Carbon-Aware Data Center Scheduler
+5. Smart Home Energy Reuse Hub
+6. About the Platform
+
+Include a top navigation bar, page titles, contextual descriptions, notifications area, and consistent navigation across all pages.
+
+## 3. OVERVIEW DASHBOARD
+
+Build a functional dashboard with:
+- Total energy consumption in kWh.
+- Renewable energy generation in kWh.
+- Estimated electricity cost in ₹.
+- Estimated energy savings in kWh and ₹.
+- Carbon emissions in kg CO2e.
+- Renewable energy utilization percentage.
+- Number of optimization opportunities.
+
+Include:
+- Interactive energy consumption line chart.
+- Renewable generation versus demand chart.
+- Baseline versus optimized energy comparison.
+- Module summary cards for all four sectors.
+- Recent simulated events and recommendations.
+- Navigation links to each module.
+
+All metrics must be calculated from consistent sample data. Avoid double-counting energy across the four sectors.
+
+## 4. MODULE ONE: COLD-CHAIN WAREHOUSE DIGITAL TWIN
+
+Scenario: A refrigerated food warehouse maintains a target temperature of -18°C. Refrigeration is energy-intensive, and thermal loads vary with weather and operating conditions.
+
+Interface:
+- Warehouse zone heatmap with multiple storage zones.
+- Temperature readings and target temperature.
+- Refrigeration power in kW and energy in kWh.
+- Outside temperature and electricity tariff.
+- Temperature trend chart.
+- Normal cooling versus pre-cooling comparison.
+
+Interactive inputs:
+- Outside temperature.
+- Warehouse thermal load.
+- Cooling power.
+- Operating duration.
+- Electricity prices for different periods.
+- Pre-cooling schedule.
+
+Simulation:
+- Calculate baseline refrigeration energy and electricity cost.
+- Simulate an alternative cooling schedule.
+- Compare energy consumption, cost, and estimated emissions.
+- Display the estimated savings and a clear explanation.
+
+Important: Do not assume that shifting cooling automatically reduces energy consumption. Calculate the cost benefit from the selected tariff and model assumptions. Respect validated food-storage temperature limits, and never recommend unsafe temperature excursions or uncontrolled refrigeration shutdowns.
+
+## 5. MODULE TWO: SMART SOLAR OPTIMIZER
+
+Scenario: A campus or institution monitors rooftop solar generation, inverter output, and electricity demand.
+
+Interface:
+- Solar generation card.
+- Expected versus actual generation chart.
+- Inverter performance indicator.
+- Electricity demand and surplus visualization.
+- Solar performance trend.
+- Digital Twin comparison panel.
+
+Interactive inputs:
+- Expected solar generation in kWh.
+- Actual generation in kWh.
+- Campus energy demand.
+- Estimated inverter efficiency.
+- Optional shading or performance-loss assumption.
+
+Simulation:
+- Calculate the generation shortfall.
+- Estimate surplus solar energy.
+- Calculate renewable-energy utilization.
+- Compare baseline operation with an optimized energy-use scenario.
+- Recommend appropriate inspections or maintenance when underperformance is detected.
+
+Explain possible shading, soiling, inverter faults, or weather-related differences without claiming a fault has been confirmed.
+
+## 6. MODULE THREE: CARBON-AWARE DATA CENTER SCHEDULER
+
+Scenario: A data center schedules flexible computing jobs to reduce electricity cost and carbon emissions while meeting deadlines.
+
+Interface:
+- Computing job table.
+- Server capacity and efficiency.
+- Electricity price timeline.
+- Grid-carbon intensity timeline.
+- Job deadlines and completion status.
+- Baseline versus optimized scheduling comparison.
+
+Each sample job should include:
+- Job name.
+- Estimated execution duration.
+- Required energy in kWh.
+- Deadline.
+- Priority.
+- Available server options.
+
+Interactive inputs:
+- Job selection.
+- Electricity prices by time slot.
+- Grid-carbon intensity by time slot.
+- Server energy efficiency.
+- Job deadlines and available capacity.
+
+Simulation:
+- Evaluate alternative time slots and server choices.
+- Calculate energy cost and emissions.
+- Enforce deadlines, server capacity, and job feasibility.
+- Recommend a schedule that balances cost, carbon emissions, and completion time.
+- Show why the selected schedule is preferable.
+
+Use a transparent deterministic scheduling heuristic. Do not claim to solve a mathematically optimal schedule unless the implementation actually guarantees optimality.
+
+## 7. MODULE FOUR: SMART HOME ENERGY REUSE HUB
+
+Scenario: A home uses rooftop solar generation, battery storage, and flexible appliances to maximize the useful consumption of surplus renewable energy.
+
+Interface:
+- Solar generation.
+- Household demand.
+- Battery state of charge.
+- Available surplus energy.
+- Grid imports.
+- Appliance scheduling panel.
+- Energy allocation visualization.
+
+Appliances:
+- Water heater.
+- Washing machine.
+- Device charging.
+- Other flexible household loads.
+
+Interactive inputs:
+- Available solar energy.
+- Household base demand.
+- Battery capacity and state of charge.
+- Grid electricity price.
+- Appliance energy requirements.
+- Appliance priority and scheduling window.
+
+Simulation:
+- Allocate surplus energy to eligible appliances.
+- Respect battery charge and discharge limits.
+- Respect appliance operating requirements and household power constraints.
+- Calculate remaining surplus, grid imports, estimated cost, and emissions.
+- Compare a baseline plan with the optimized plan.
+- Explain which appliances should run and why.
+
+Never allocate the same unit of energy twice or count battery discharge as newly generated energy.
+
+## 8. SHARED DIGITAL TWIN ENGINE
+
+Create a reusable simulation engine shared across the four modules.
+
+Every module must have:
+1. Editable input controls.
+2. A baseline scenario.
+3. A Run Simulation or Optimize button.
+4. An optimized scenario.
+5. Before-and-after charts.
+6. Energy, cost, and emissions comparisons.
+7. Estimated savings.
+8. An explainable recommendation panel.
+9. A reset-to-default option.
+
+Calculations must update based on user input.
+
+Use transparent formulas:
+- Energy cost = electricity consumed × applicable tariff.
+- Emissions = electricity consumed × applicable carbon intensity.
+- Energy savings = baseline energy − optimized energy.
+- Cost savings = baseline cost − optimized cost.
+- Emissions reduction = baseline emissions − optimized emissions.
+- Renewable utilization = useful renewable energy consumed ÷ available renewable energy × 100, where applicable.
+
+Use appropriate time-dependent calculations where necessary. Keep units consistent and document all assumptions. Do not force savings to be positive if an optimization performs worse.
+
+## 9. GENAI-STYLE RECOMMENDATION PANEL
+
+Add an explainable recommendation panel to every module.
+
+In this first version, use local rule-based logic and recommendation templates rather than a paid LLM API.
+
+Each recommendation should include:
+- Detected condition.
+- Suggested action.
+- Reason for the recommendation.
+- Estimated energy, cost, or carbon benefit.
+- Relevant assumptions and limitations.
+
+Example for solar:
+"Actual generation is below the expected value. Check weather conditions, shading, panel cleanliness, and inverter readings before diagnosing a fault."
+
+Example for the home:
+"Surplus solar energy is available. Consider scheduling an eligible appliance during the surplus window to reduce later grid imports."
+
+Label recommendations as simulated and estimated. Structure the code so a real GenAI service can be integrated later.
+
+## 10. SENSOR DATA AND COMPUTER VISION READINESS
+
+For the initial MVP:
+- Provide sample sensor readings for temperature, energy consumption, solar generation, and battery state.
+- Label all mock data clearly as simulated.
+- Create reusable data interfaces for future IoT integration.
+- Include a small simulated equipment-status or anomaly panel.
+- Structure the warehouse module so image-based thermal or equipment inspection can be added later.
+
+Do not pretend that real sensors, live weather feeds, computer vision models, or hardware devices are connected.
+
+Do not add unnecessary camera upload infrastructure or complex machine-learning dependencies to this first build.
+
+## 11. DATA AND APPLICATION STRUCTURE
+
+Create reusable components such as:
+- Sidebar.
+- Header.
+- Metric cards.
+- Chart panels.
+- Input forms.
+- Simulation result panels.
+- Recommendation cards.
+- Module navigation cards.
+
+Keep separate files for:
+- Shared calculation utilities.
+- Sample datasets.
+- Shared TypeScript interfaces.
+- Individual module pages.
+- Common UI components.
+
+Use centralized state where necessary so dashboard summaries update consistently after simulations.
+
+Persist user-selected settings locally when practical, but make the website usable without creating an account or configuring a database.
+
+## 12. FUNCTIONALITY AND QUALITY CHECKS
+
+Before finishing:
+- Verify all navigation routes.
+- Verify every module loads.
+- Verify every input changes the simulation.
+- Verify Run Simulation and Reset buttons work.
+- Verify charts reflect calculated results.
+- Verify units and formulas are consistent.
+- Verify all four modules have baseline and optimized comparisons.
+- Verify responsive layouts.
+- Fix build errors and broken imports.
+- Avoid unnecessary dependencies, duplicate code, and repeated full-project generation.
+
+## FINAL DELIVERABLE
+
+Deliver one complete, polished, functional EcoTwin website with a common dashboard, four interactive sector-specific energy optimization modules, Digital Twin simulations, energy and carbon calculations, and explainable recommendations.
+
+The initial website must work with simulated data and no paid services. Keep the code ready for future Python backend, database, sensor, Computer Vision, and real GenAI integration.
+
+**Build the actual application, not just a design mockup. Prioritize functional completeness and efficient implementation over excessive visual effects.**
