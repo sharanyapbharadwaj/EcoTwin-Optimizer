@@ -1,0 +1,29 @@
+I have already built and published my EcoTwin — Sustainable Energy Monitoring and Optimization Platform website. Now I want to download the complete source code and continue development locally in VS Code.
+
+**Do not modify, delete, regenerate, or rebuild anything in my project.**
+
+Please inspect my existing project and provide the following information:
+
+1. **Complete project file structure:** Show the folder tree of all files and directories in my project, including the frontend source code, components, pages, styles, assets, configuration files, and any existing backend files.
+
+2. **Frontend details:** Identify the framework, programming languages, libraries, and build tools used. Locate `package.json`, the main entry point, routing configuration, and the files implementing each of my four modules:
+   - Cold-Chain Warehouse Twin
+   - Smart Solar Optimizer
+   - Carbon-Aware Data Center Scheduler
+   - Smart Home Energy Reuse Hub
+
+3. **Backend status:** Tell me whether a backend already exists. If so, list its files, framework, API endpoints, and dependencies. If no backend exists, explicitly state that.
+
+4. **Database status:** Tell me whether a database is configured or connected. Identify the database technology, configuration files, schema, and existing tables, if any. Do not expose passwords, API keys, tokens, or other secrets.
+
+5. **Data and calculations:** Identify where the sample data, energy calculations, Digital Twin simulations, and recommendation logic are implemented. Distinguish working calculations from static or mock data.
+
+6. **Environment and dependencies:** Identify the dependency installation and run commands, environment-variable requirements, and any configuration needed to run the project locally.
+
+7. **Source-code retrieval:** Explain exactly how I can export or download the entire project, including hidden configuration files where available, and how to connect the existing project to GitHub without losing my work.
+
+8. **Final report:** Present the complete folder tree, important file paths, backend/database status, and step-by-step instructions for running the existing project on my Windows laptop using VS Code.
+
+If you have access to the project files, inspect the actual files rather than guessing. If you cannot access a file or perform an action, tell me exactly what I need to do manually.
+
+For now, this is an inspection-only task. Do not make any code changes.
